@@ -1,0 +1,178 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="Description" content="Introdcution of optimization benchmark problems for industrial applications">
+	<meta name="Keywords" content="Optimization,Benchmark,Benchmark Problems,Industrial Application,Energy Management System,Water Supply Operational Scheduling">
+	<title>Optimization Benchmark Problems for Industrial Applications</title>
+	<link rel="StyleSheet" style="text/css" href="../style.css">
+</head>
+<body topmargin="0" leftmargin="0">
+	<!-- Begin of Flame -->
+	<table width="770" border="0" cellpadding="0" cellspacing="0" align="center" height="100%" id="top">
+		<tr>
+			<!-- Left Line -->
+			<td width="1" bgcolor="#000000"></td>
+			<!-- Main -->
+			<td width="768" valign="top">
+				<!-- Begin of Header -->
+				<table width="100%" bgcolor="#000099" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td align="center">
+							<h1 style="color:#ffffff">Optimization Benchmark Problems for Industrial Applications</h1>
+						</td>
+					</tr>
+				</table>
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top:5px">
+					<tr>
+						<td align="right">
+							<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td>
+										The Institute of Electrical Engineers of Japan<br>
+										Investigating R&amp;D committee on<br>&emsp;new development of computational intelligence techniques and<br>&emsp;their applications to industrial systems&nbsp;<br>
+										Investigating R&amp;D committee on<br>&emsp;system optimization and<br>&emsp;benchmark problems for industrial application&nbsp;
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="right"><u>Last update on Sept. 29th, 2015</u>&nbsp;</td>
+					</tr>
+				</table>
+				<!-- End of header -->
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="10"></td>
+						<td width="748">
+							<!-- Begin of Main Contents -->
+							<div align="left" class="section">Optimization benchmark problem for operational planning</div>
+							<div align="left" class="section2">and scheduling in an automatic picking system (Ver. 1)</div>
+							<hr color="#ff9900" size="1" width="100%" noshade>
+							<div class="sentence" style="color:#ff0000">This is old version. The latest version is available from <a href="./P3-2.html">P3 (Ver. 2)</a>.</div>
+							<div class="subsection">Summary</div>
+							<div class="sentence">
+								Automatic picking system is one of examples of logistic devices which assort products.<br>
+								In the automatic picking system, as shown in Figs. 1 and 2, the products are assorted based on the given assortment demands.<br>
+								In order to obtain an optimal operational plan, the products assignment problem to the lanes and the scheduling problem to determine output schedules of the products from the lanes and a work order of each assortment demand have to be considered simultaneously.<br>
+								This benchmark problem provides two types of operational planning problems which are labeled &quot;00&quot; and &quot;01&quot;.<br>
+								The specific formulation is given in the references [3] and [4].
+							</div>
+							<div class="sentence" align="center" style="margin-top:10px;margin-bottom:10px"><img src="./P3-fig1.png" width="600" height="284"><br>Fig. 1: Automatic picking system [1] (the characters in the figure are written in Japanese)</div>
+							<div class="sentence" align="center" style="margin-top:10px;margin-bottom:10px"><img src="./P3-fig2.png" width="600" height="390"><br>Fig. 2: Example of delivery demands [1] <br> (the characters in the figure are written in Japanese)</div>
+							<div class="subsection">Class and scale (in the case of the problem 00)</div>
+							<ul class="classification">
+								<li class="classification">Class: Discrete nonlinear optimization problem</li>
+								<li class="classification">Number of decision variables: 925,500 (Continuous: 0, Discrete: 925,500)</li>
+								<li class="classification">Number of inequality constraints: 89,075 (Linear: 100, Nonlinear: 88,975)</li>
+								<li class="classification">Number of equality constraints: 19,100 (Linear: 10,100, Nonlinear: 9,000)</li>
+							</ul>
+							<div class="subsection">Known Feasible Solutions (OFV is objective function value. Sol. is solution.)</div>
+							<div class="sentence" style="margin-bottom:10px">
+								<table class="record" border="1" cellpadding="2" cellspacing="0">
+								<table class="record" border="1" cellpadding="2" cellspacing="0">
+									<tr>
+										<td class="record" rowspan="2" align="center"><b>Method</b></td>
+										<td class="record" rowspan="2" align="center"><b>OFV</b></td>
+										<td class="record" colspan="2" align="center"><b>Constraint violations</b></td>
+										<td class="record" rowspan="2" nowrap align="center"><b>Ref.</b></td>
+										<td class="record" rowspan="2" align="center"><b>Reporter</b></td>
+										<td class="record" rowspan="2" align="center"><b>Sol.</b></td>
+									</tr>
+									<tr>
+										<td class="record" align="center" nowrap><b>Total</b></td>
+										<td class="record" align="center"><b>Tolerance</b></td>
+									</tr>
+									<tr>
+										<td>Constraint programming</td>
+										<td nowrap align="right">4149.5</td>
+										<td align="right" nowrap>0</td>
+										<td align="right" nowrap>1.0 &#215; 10<sup>-10</sup></td>
+										<td align="center">[5]</td>
+										<td nowrap align="center">T. Miyamoto</td>
+										<td nowrap><a href="../P3-1_solution_3.zip" target="_blank">Sol.</a>&dagger; (Problem 00)</td>
+									</tr>
+									<tr>
+										<td>Constraint programming</td>
+										<td nowrap align="right">4047.0</td>
+										<td align="right" nowrap>0</td>
+										<td align="right" nowrap>1.0 &#215; 10<sup>-10</sup></td>
+										<td align="center">[5]</td>
+										<td nowrap align="center">T. Miyamoto</td>
+										<td nowrap><a href="../P3-1_solution_4.zip" target="_blank">Sol.</a>&dagger; (Problem 01)</td>
+									</tr>
+									<tr>
+										<td align="center">&mdash;</td>
+										<td nowrap align="right">4206.0</td>
+										<td align="right" nowrap>0</td>
+										<td align="right" nowrap>0</td>
+										<td align="center">&mdash;</td>
+										<td nowrap align="center">&mdash;</td>
+										<td nowrap><a href="../P3-1_solution_1.zip" target="_blank">Sol.</a>&dagger; (Problem 00)</td>
+									</tr>
+									<tr>
+										<td align="center">&mdash;</td>
+										<td nowrap align="right">4159.0</td>
+										<td align="right" nowrap>0</td>
+										<td align="right" nowrap>0</td>
+										<td align="center">&mdash;</td>
+										<td nowrap align="center">&mdash;</td>
+										<td nowrap><a href="../P3-1_solution_2.zip" target="_blank">Sol.</a>&dagger; (Problem 01)</td>
+									</tr>
+								</table>
+								<div style="margin-left:10pt;margin-right:10pt;">&dagger;Decompress the obtained file. Replace the decompressed text files by &quot;P3_solution_y.txt&quot; and &quot;P3_data.csv&quot; in the source code.</div>
+							</div>
+							<div class="subsection">Source code</div>
+							<div class="sentence" style="margin-bottom:10px"><a href="../P3-1.zip" target="_blank">P3-1.zip</a> (C/C++) &mdash; See "Readme.txt" in order to know how to use.</div>
+							<div class="subsection">References</div>
+							<div class="sentence" style="margin-bottom:10px">
+								<table border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td nowrap valign="top">[1]&nbsp;</td>
+										<td>Investigating R&amp;D committee on new development of computational intelligence techniques and their applications to industrial systems: <a href="https://www.bookpark.ne.jp/cm/ieej/detail.asp?content_id=IEEJ-GH1287-PDF" target="_blank">&quot;Optimization benchmark problems for industrial applications&quot;</a>, IEEJ Tech. Rep., No. 1287, Section 3.4 (2013) [in Japanese]</td>
+									</tr>
+									<tr>
+										<td nowrap valign="top">[2]&nbsp;</td>
+										<td>H. Iima and Y. Kawano: &quot;Operational planning and scheduling benchmark problem in an automatic picking systems&quot;, Proc. of the 2014 Annual Meeting on the Institute of Electrical Engineers of Japan, Vol. 4, 4-S21(17)&ndash;(20) (2014) [in Japanese]</td>
+									</tr>
+									<tr>
+										<td nowrap valign="top">[3]&nbsp;</td>
+										<td>H. Iima, Y. Koguma, and Y. Kawano: &quot;Operational planning and scheduling benchmark problem in an automatic picking system for metaheuristics&quot;, Proc. of Schduling Symposium 2014, pp. 201&ndash;206 (2014) [in Japanese]</td>
+									</tr>
+									<tr>
+										<td nowrap valign="top">[4]&nbsp;</td>
+										<td>H. Iima, Y. Kawano, and Y. Koguma: &quot;Operational planning and scheduling problem in an automatic picking system as a benchmark&quot;, Proc. of the first IEEJ International Workshop on Sensing, Actuation, and Motion Control (SAMCON2015), IS1-2 (2015)</td>
+									</tr>
+									<tr>
+										<td nowrap valign="top">[5]&nbsp;</td>
+										<td>T. Miyamoto, K. Mori, S. Kitamura, and Y. Izui: &quot;Constraint programming model for operational planning and scheduling problem in automatic picking system&quot;, Proc. of International Symposium on Scheduling 2015, pp. 163&ndash;168 (2015)</td>
+									</tr>
+								</table>
+							</div>
+							<div class="subsection">Change log</div>
+							<ul class="classification">
+								<li class="classification">Sept. 29th, 2015: A new solution is added to Known Feasible Solutions.
+								<li class="classification">June 5th, 2015: The bibliographical data of the reference [4] is updated.
+								<li class="classification">Dec. 3rd, 2014: English page is released.
+								<li class="classification">Dec. 1st, 2014: The source code is updated based on the reference [3].
+								<li class="classification">July 18th, 2014: The source code based on the reference [2] is released.
+							</ul>
+							<!-- End of Main Contents -->
+							<!-- Begin of Footer -->
+							<br>
+							<hr color="#ff9900" size="1" width="100%" noshade>
+							<div align="right"><a class="toppage" href="./index.html">Go to top</a></div>
+							<!-- End of Footer -->
+						</td>
+						<td width="10"></td>
+					</tr>
+				</table>
+			</td>
+			<!-- Right Line -->
+			<td width="1" bgcolor="#000000"></td>
+		</tr>
+	</table>
+	<!-- End of Flame -->
+</body>
+</html>

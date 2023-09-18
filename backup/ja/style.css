@@ -1,0 +1,95 @@
+
+BODY {
+	background	:#ffffff;
+	padding-left:1em;
+}
+TABLE {
+	margin		:0px;
+	border-width	:0px;
+}
+TH {
+	color		:#993300;
+	font-size	:10pt;
+	padding		:6px;
+	background	:#ffefd5;
+	border-width	:0 1px 1px 0;
+	border-color	:#ffaa77;
+	border-style	:solid;
+	text-align	:left;
+}
+TD {
+	color		:#000000;
+	font-size	:10pt;
+	padding		:6px;
+	background	:#fff9e6;
+	border-width	:0 1px 1px 0;
+	border-color	:#ffcc99 ;
+	border-style	:solid;
+	text-align	:left;
+	line-height	:14pt;
+}
+TD.spde {
+	padding:	3px;
+	border-width:	0 0 0 0;
+}
+TD.spde2 {
+	padding:	3px;
+	border-width:	0 0 0 0;
+	width:	210px;
+	white-space: nowrap;
+}
+TD.MainFrame {
+	padding:	0px;
+	border-width:	0 0 0 0;
+	background	:#ffffff;
+}
+TD.TL {
+	border-width	:1px 1px 1px 1px;
+}
+TD.T {
+	border-width	:1px 1px 1px 0px;
+}
+TD.L {
+	border-width	:0px 1px 1px 1px;
+}
+TH.Title {
+	font-size	:1.2em;
+	text-align	:center;
+	font-family	:Tahoma;
+	border-width	:1px 1px 1px 1px;
+}
+TH.L {
+	border-width	:0px 1px 1px 1px;
+}
+UL {
+	margin-top: 0.25em;
+	margin-left: 3em;
+	padding-left: 0px;
+	margin-bottom: 0.25em;
+}
+UL.Bio {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 1.5em;
+}
+LI {
+	line-height: 1.5em;
+}
+TD.LinkButton {
+	color		:#000000;
+	font		:bold 12pt;
+	padding		:4px;
+	background	:#ffeebb;
+	border-width	:2px;
+	border-color	:#ffcc99;
+	border-style	:solid;
+	text-align	:left;
+	line-height	:130%;
+	font-family	:Tahoma;
+}
+A.Navi {
+	color		:#ee7700;
+	text-decoration	:underline;
+	font-family	:Tahoma;
+	font-size	:10pt;
+}

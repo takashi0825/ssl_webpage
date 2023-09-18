@@ -1,0 +1,127 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="Description" content="産業応用のための最適化ベンチマーク問題集の紹介">
+	<meta name="Keywords" content="最適化,ベンチマーク,ベンチマーク問題集,産業応用,エネルギーマネジメントシステム,上水道ポンプ運用計画">
+	<title>産業応用のための最適化ベンチマーク問題集</title>
+	<link rel="StyleSheet" style="text/css" href="../style.css">
+</head>
+<body topmargin="0" leftmargin="0">
+	<!-- Begin of Flame -->
+	<table width="770" border="0" cellpadding="0" cellspacing="0" align="center" height="100%" id="top">
+		<tr>
+			<!-- Left Line -->
+			<td width="1" bgcolor="#000000"></td>
+			<!-- Main -->
+			<td width="768" valign="top">
+				<!-- Begin of Header -->
+				<table width="100%" bgcolor="#000099" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td align="center">
+							<h1 style="color:#ffffff">産業応用のための最適化ベンチマーク問題集</h1>
+						</td>
+					</tr>
+				</table>
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top:5px">
+					<tr>
+						<td align="right">
+							<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td>
+										一般社団法人 電気学会<br>
+										情報知能システムの新展開とその産業応用調査専門委員会&nbsp;<br>
+										産業応用のためのシステム最適化とベンチマーク問題調査専門委員会&nbsp;
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="right"><u>Last update on June 3rd, 2014</u>&nbsp;</td>
+					</tr>
+				</table>
+				<!-- End of header -->
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="10"></td>
+						<td width="748">
+							<!-- Begin of Main Contents -->
+							<div align="left" class="section">ソースコードの使い方</div>
+							<hr color="#ff9900" size="1" width="100%" noshade>
+							<div class="subsection">はじめに</div>
+							<div class="sentence" style="margin-bottom:10px">
+								ソースコードの使い方について説明します。<br>
+								以下では，P1を例として説明しますが，他のコードでも同様の要領で使うことができます。
+							</div>
+							<div class="subsection">ファイル構成</div>
+							<ul class="classification">
+								<li class="classification">P1.cpp<br>P1（エネルギープラント運用計画問題）クラスメインファイル。</li>
+								<li class="classification">P1.h<br>P1クラスのヘッダーファイル。</li>
+								<li class="classification">P1_evaluation.cpp<br>入力された解の評価を行うプログラム。P1クラスを使うためのサンプルプログラムです。</li>
+								<li class="classification">P1_x.txt<br>P1_evaluation.cppで評価する解の設定ファイル。第n行目に第n変数の値を記述して下さい。</li>
+								<li class="classification">P1_tolerance.conf<br>制約違反許容量&#949;の設定ファイル。g(x) &gt; &#949;, |h(x)| &gt; &#949;のときに制約違反と判定します。</li>
+								<li class="classification">P1_***.conf<br>P1クラスで読み込まれる定数の設定ファイル。</li>
+							</ul>
+							<div class="subsection">評価プログラム（サンプルコード）の実行方法</div>
+							<ul class="classification">
+								<li class="classification">Visual C++の場合<br>cl P1.cpp P1_evaluation.cpp /FeP1.exe /EHsc（ソースコードのコンパイル）<br>P1.exe（コードの実行）
+								<li class="classification">gccの場合<br>g++ P1.cpp P1_evaluation.cpp -o P1.out（ソースコードのコンパイル）<br>./P1.out（コードの実行）
+								<li class="classification">実行結果<br>P1_x.txt内に記述した解を評価し，以下を出力します。<br>
+								<ul class="classification">
+									<li class="classification2">x = ...：入力した解を表示
+									<li class="classification2">y = ...：入力した解から構成した離散決定変数を表示
+									<li class="classification2">f1 = ...：1番目の目的関数値。<br>
+									Known Feasible Solutionsの目的関数値にはこの値を掲載しています。
+									<li class="classification2">g1 = ...：1番目の不等式制約条件評価値。
+									<li class="classification2">h1 = ...：1番目の等式制約条件評価値。
+									<li class="classification2">Sum of violation = ...：制約違反量合計値V(x,y)。<br>
+									V(x,y) = max{0, g1(x,y)} + max{0, g2(x,y)} + ... + |h1(x,y)| + |h2(x,y)| + ...。<br>
+									Known Feasible Solutionsの制約違反量合計値にはこの値を掲載しています。
+									<li class="classification2">Tolerance: ...：P1_tolerance.confで入力した制約違反許容量&#949;
+									<li class="classification2">Input solution is ***：<br>
+									入力した解が実行可能解であれば***がfeasible, <br>
+									実行不可能解であれば***がinfeasibleとなります。
+								</ul>
+							</ul>
+							<div class="subsection">クラス構成 (Public methods)</div>
+							<ul class="classification">
+								<li class="classification">void P1::evaluation(double *x, double *y, double *f, double *g, double *h)<br>
+								目的関数値と制約条件評価値を計算します。<br>
+								連続決定変数を配列xに，離散決定変数を配列yに代入してください。<br>
+								目的関数値が配列f，不等式制約条件評価値が配列g，等式制約条件評価値が配列hに<br>
+								代入されます。
+								<li class="classification">bool P1::checkFeasibility(double *x, double *y)<br>
+								解の実行可能性を確認します。<br>
+								連続決定変数を配列xに，離散決定変数を配列yに代入してください。<br>
+								P1_tolerance.confで設定した制約違反許容量&#949;を用いて，<br>
+								g(x) &gt; &#949;, |h(x)| &gt; &#949;のときに制約違反と判定します。<br>
+								実行可能解であれば「true」を，実行不可能であれば「false」を返します。
+							</ul>
+							<div class="subsection">クラス構成 (Public properties)</div>
+							<ul class="classification">
+								<li class="classification">int P1.N_x：連続決定変数の数。
+								<li class="classification">int P1.N_y：離散決定変数の数。
+								<li class="classification">int P1.P：目的関数の数。
+								<li class="classification">int P1.M：不等式制約条件の数。
+								<li class="classification">int P1.Q：等式制約条件の数。
+								<li class="classification">double P1.eps：制約違反許容量。
+							</ul>
+							<!-- End of Main Contents -->
+							<!-- Begin of Footer -->
+							<br>
+							<hr color="#ff9900" size="1" width="100%" noshade>
+							<div align="right"><a class="toppage" href="./index.html">トップに戻る</a></div>
+							<!-- End of Footer -->
+						</td>
+						<td width="10"></td>
+					</tr>
+				</table>
+			</td>
+			<!-- Right Line -->
+			<td width="1" bgcolor="#000000"></td>
+		</tr>
+	</table>
+	<!-- End of Flame -->
+</body>
+</html>

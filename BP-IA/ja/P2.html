@@ -1,0 +1,161 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="Description" content="産業応用のための最適化ベンチマーク問題集の紹介">
+	<meta name="Keywords" content="最適化,ベンチマーク,ベンチマーク問題集,産業応用,エネルギーマネジメントシステム,上水道ポンプ運用計画">
+	<title>産業応用のための最適化ベンチマーク問題集</title>
+	<link rel="StyleSheet" style="text/css" href="../style.css">
+</head>
+<body topmargin="0" leftmargin="0">
+	<!-- Begin of Flame -->
+	<table width="770" border="0" cellpadding="0" cellspacing="0" align="center" height="100%" id="top">
+		<tr>
+			<!-- Left Line -->
+			<td width="1" bgcolor="#000000"></td>
+			<!-- Main -->
+			<td width="768" valign="top">
+				<!-- Begin of Header -->
+				<table width="100%" bgcolor="#000099" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td align="center">
+							<h1 style="color:#ffffff">産業応用のための最適化ベンチマーク問題集</h1>
+						</td>
+					</tr>
+				</table>
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top:5px">
+					<tr>
+						<td align="right">
+							<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td>
+										一般社団法人 電気学会<br>
+										情報知能システムの新展開とその産業応用調査専門委員会&nbsp;<br>
+										産業応用のためのシステム最適化とベンチマーク問題調査専門委員会&nbsp;<br>
+										システム最適化と産業応用ベンチマーク問題調査専門委員会&nbsp;<br>
+										計算知能技術と産業応用のためのベンチマーク問題調査専門委員会&nbsp;
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="right"><u>Last update on June 3rd, 2014</u>&nbsp;</td>
+					</tr>
+				</table>
+				<!-- End of header -->
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="10"></td>
+						<td width="748">
+							<!-- Begin of Main Contents -->
+							<div align="left" class="section">上水道送水ポンプ運用計画のための最適化ベンチマーク問題</div>
+							<hr color="#ff9900" size="1" width="100%" noshade>
+							<div class="subsection">問題概要</div>
+							<div class="sentence">
+								上水道送水ポンプ運用計画問題は，図1に示すような送水プロセスにおいて，水需要を満たしながら，配水池水位を所定の範囲に保ちつつ，送水ポンプの起動停止回数，消費電力量を最小にするように送水ポンプの運転状態を計画する問題である。<br>
+								本問題では，ポンプ6台の送水プロセスの24時刻運用計画問題を提供する。<br>
+								<u>定式化については，文献[1], [3]を参考にされたい。</u>
+							</div>
+							<div class="sentence" align="center" style="margin-top:10px;margin-bottom:10px"><img src="./P2-fig1.png" width="450" height="284"><br>図1：送水プロセス（文献[1]から引用）</div>
+							<div class="subsection">問題の部類・規模</div>
+							<ul class="classification">
+								<li class="classification">問題のクラス：非線形離散変数2目的最適化問題</li>
+								<li class="classification">決定変数の数：24（連続：0，離散：24）</li>
+								<li class="classification">不等式制約条件数：73（線形：24，非線形：49）</li>
+								<li class="classification">等式制約条件数：0（線形：0，非線形：0）</li>
+							</ul>
+							<div class="subsection">Known Feasible Solutions</div>
+							<div class="sentence" style="margin-bottom:10px">
+								<table class="record" border="1" cellpadding="2" cellspacing="0">
+								<table class="record" border="1" cellpadding="2" cellspacing="0">
+									<tr>
+										<td class="record" rowspan="2" align="center"><b>解法</b></td>
+										<td class="record" rowspan="2" align="center"><b>目的関数値</b><br><b>（パレート解）</b></td>
+										<td class="record" colspan="2" align="center"><b>制約違反</b></td>
+										<td class="record" rowspan="2" nowrap align="center"><b>文献</b></td>
+										<td class="record" rowspan="2" align="center"><b>報告者</b></td>
+										<td class="record" rowspan="2" align="center"><b>解</b></td>
+									</tr>
+									<tr>
+										<td class="record" align="center" nowrap><b>合計値</b></td>
+										<td class="record" align="center"><b>許容量</b></td>
+									</tr>
+									<tr>
+										<td>A*探索アルゴリズム</td>
+										<td nowrap>
+											f1 = 2, f2 = 3417.83764<br>
+											f1 = 3, f2 = 3306.95791<br>
+											f1 = 4, f2 = 3277.06181<br>
+											f1 = 6, f2 = 3251.44448<br>
+											f1 = 8, f2 = 3224.37637
+										</td>
+										<td align="right" nowrap>0</td>
+										<td align="right" nowrap>0</td>
+										<td align="center">[2]</td>
+										<td nowrap>Y. Ueno, et al.</td>
+										<td nowrap><a href="../P2_solution_y_2.zip" target="_blank">解</a>&dagger;</td>
+									</tr>
+									<tr>
+										<td>ランダムサーチ + &epsilon;-制約法</td>
+										<td nowrap>
+											f1 = 3, f2 = 3365.29934<br>
+											f1 = 4, f2 = 3334.67785<br>
+											f1 = 5, f2 = 3281.34058<br>
+											f1 = 6, f2 = 3277.06181<br>
+											f1 = 7, f2 = 3254.27247<br>
+											f1 = 8, f2 = 3224.37637
+										</td>
+										<td align="right" nowrap>0</td>
+										<td align="right" nowrap>1.0 &#215; 10<sup>-10</sup></td>
+										<td align="center">[1]</td>
+										<td nowrap>T. Okamoto</td>
+										<td nowrap><a href="../P2_solution_y_1.zip" target="_blank">解</a>&dagger;</td>
+									</tr>
+								</table>
+								<div style="margin-left:10pt;margin-right:10pt;">&dagger;取得したファイルを解凍し，テキストファイルをソースコード内の「P2_solution_y.txt」と差し替えて下さい。</div>
+							</div>
+							<div class="subsection">ソースコード</div>
+							<div class="sentence" style="margin-bottom:10px"><a href="../P2.zip" target="_blank">P2.zip</a> (C/C++) &mdash; 使用法は「Readme.txt」を参照。</div>
+							<div class="subsection">参考文献</div>
+							<div class="sentence" style="margin-bottom:10px">
+								<table border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td nowrap valign="top">[1]&nbsp;</td>
+										<td>電気学会 情報知能システムの新展開とその産業応用調査専門委員会：<a href="https://www.bookpark.ne.jp/cm/ieej/detail.asp?content_id=IEEJ-GH1287-PDF" target="_blank">「産業応用のための最適化ベンチマーク問題集」</a>, 電気学会技術報告 第1287号, 3.3節 (2013)</td>
+									</tr>
+									<tr>
+										<td nowrap valign="top">[2]&nbsp;</td>
+										<td>Y. Ueno, K. Mori: <a href="http://dx.doi.org/10.1109/ICSSE.2014.6887928" target="_blank">&quot;Optimizing pump operation scheduling for water supply systems&quot;</a>,  Proc. of IEEE Int. Conf. on System Science and Engineering 2014, pp. 171&ndash;174 (2014)</td>
+									</tr>
+									<tr>
+										<td nowrap valign="top">[3]&nbsp;</td>
+										<td>K. Yokokawa, T. Okamoto, A. Kawagoe, Y. Ueno, and K. Mori: &quot;Formulation and solutions for daily operation scheduling problem of water supply pump&quot;, Proc. of the first IEEJ International Workshop on Sensing, Actuation, and Motion Control (SAMCON2015), IS1-4 (2015)</td>
+									</tr>
+								</table>
+							</div>
+							<div class="subsection">更新履歴</div>
+							<ul class="classification">
+								<li class="classification">Sept. 18th, 2014: Known Feasible Solutionsに新たな解を追加。
+								<li class="classification">June 3rd, 2014: 制約違反許容量を外部ファイルから読み込む形式に変更。
+								<li class="classification">Mar. 13th, 2014: パラメータを外部ファイルから読み込む形式に変更。デストラクタの修正。
+								<li class="classification">Nov. 7th, 2013: ソースコードを公開。
+							</ul>
+							<!-- End of Main Contents -->
+							<!-- Begin of Footer -->
+							<br>
+							<hr color="#ff9900" size="1" width="100%" noshade>
+							<div align="right"><a class="toppage" href="./index.html">トップに戻る</a></div>
+							<!-- End of Footer -->
+						</td>
+						<td width="10"></td>
+					</tr>
+				</table>
+			</td>
+			<!-- Right Line -->
+			<td width="1" bgcolor="#000000"></td>
+		</tr>
+	</table>
+	<!-- End of Flame -->
+</body>
+</html>

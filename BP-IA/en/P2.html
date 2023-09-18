@@ -1,0 +1,162 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="Description" content="Introdcution of optimization benchmark problems for industrial applications">
+	<meta name="Keywords" content="Optimization,Benchmark,Benchmark Problems,Industrial Application,Energy Management System,Water Supply Operational Scheduling">
+	<title>Optimization Benchmark Problems for Industrial Applications</title>
+	<link rel="StyleSheet" style="text/css" href="../style.css">
+</head>
+<body topmargin="0" leftmargin="0">
+	<!-- Begin of Flame -->
+	<table width="770" border="0" cellpadding="0" cellspacing="0" align="center" height="100%" id="top">
+		<tr>
+			<!-- Left Line -->
+			<td width="1" bgcolor="#000000"></td>
+			<!-- Main -->
+			<td width="768" valign="top">
+				<!-- Begin of Header -->
+				<table width="100%" bgcolor="#000099" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td align="center">
+							<h1 style="color:#ffffff">Optimization Benchmark Problems for Industrial Applications</h1>
+						</td>
+					</tr>
+				</table>
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top:5px">
+					<tr>
+						<td align="right">
+							<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td>
+										The Institute of Electrical Engineers of Japan<br>
+										Investigating R&amp;D committee on<br>&emsp;new development of computational intelligence techniques and<br>&emsp;their applications to industrial systems&nbsp;<br>
+										Investigating R&amp;D committee on<br>&emsp;system optimization and<br>&emsp;benchmark problems for industrial application&nbsp;
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="right"><u>Last update on June 5th, 2015</u>&nbsp;</td>
+					</tr>
+				</table>
+				<!-- End of header -->
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="10"></td>
+						<td width="748">
+							<!-- Begin of Main Contents -->
+							<div align="left" class="section">Optimization benchmark problem for water supply pump</div>
+							<div align="left" class="section2">scheduling</div>
+							<hr color="#ff9900" size="1" width="100%" noshade>
+							<div class="subsection">Summary</div>
+							<div class="sentence">
+								The water supply pump scheduling problem is formulated to determine a water supply pump operational schedule so that the number of pump on-off switching and total of power consumption are minimized with satisfying a water demand and keeping the water level of the distribution reservoir within a given range in the water supply process as shown in Fig. 1.<br>
+								This benchmark problem provides the 24 time operation scheduling problem with 6 pumps.<br>
+								The specific formulation is given in the references [1] and [3].
+							</div>
+							<div class="sentence" align="center" style="margin-top:10px;margin-bottom:10px"><img src="./P2-fig1.png" width="450" height="284"><br>Fig. 1: Water supply process [1] (the characters in the figure are written in Japanese)</div>
+							<div class="subsection">Class and scale</div>
+							<ul class="classification">
+								<li class="classification">Class: Discrete nonlinear two objective optimization problem</li>
+								<li class="classification">Number of decision variables: 24 (Continuous: 0, Discrete: 24)</li>
+								<li class="classification">Number of inequality constraints: 73 (Linear: 24, Nonlinear: 49)</li>
+								<li class="classification">Number of equality constraints: 0 (Linear: 0, Nonlinear: 0)</li>
+							</ul>
+							<div class="subsection">Known Feasible Solutions (OFV is objective function value. Sol. is solution.)</div>
+							<div class="sentence" style="margin-bottom:10px">
+								<table class="record" border="1" cellpadding="2" cellspacing="0">
+								<table class="record" border="1" cellpadding="2" cellspacing="0">
+									<tr>
+										<td class="record" rowspan="2" align="center"><b>Method</b></td>
+										<td class="record" rowspan="2" align="center"><b>OFV</b><br><b>(Pareto solution)</b></td>
+										<td class="record" colspan="2" align="center"><b>Constraint violations</b></td>
+										<td class="record" rowspan="2" nowrap align="center"><b>Ref.</b></td>
+										<td class="record" rowspan="2" align="center"><b>Reporter</b></td>
+										<td class="record" rowspan="2" align="center"><b>Sol.</b></td>
+									</tr>
+									<tr>
+										<td class="record" align="center" nowrap><b>Total</b></td>
+										<td class="record" align="center"><b>Tolerance</b></td>
+									</tr>
+									<tr>
+										<td>A* Search Algorithm</td>
+										<td nowrap>
+											f1 = 2, f2 = 3417.83764<br>
+											f1 = 3, f2 = 3306.95791<br>
+											f1 = 4, f2 = 3277.06181<br>
+											f1 = 6, f2 = 3251.44448<br>
+											f1 = 8, f2 = 3224.37637
+										</td>
+										<td align="right" nowrap>0</td>
+										<td align="right" nowrap>0</td>
+										<td align="center">[2]</td>
+										<td nowrap>Y. Ueno, et al.</td>
+										<td nowrap><a href="../P2_solution_y_2.zip" target="_blank">Sol.</a>&dagger;</td>
+									</tr>
+									<tr>
+										<td>Random Search &times; &epsilon;-constraint Method</td>
+										<td nowrap>
+											f1 = 3, f2 = 3365.29934<br>
+											f1 = 4, f2 = 3334.67785<br>
+											f1 = 5, f2 = 3281.34058<br>
+											f1 = 6, f2 = 3277.06181<br>
+											f1 = 7, f2 = 3254.27247<br>
+											f1 = 8, f2 = 3224.37637
+										</td>
+										<td align="right" nowrap>0</td>
+										<td align="right" nowrap>1.0 &#215; 10<sup>-10</sup></td>
+										<td align="center">[1]</td>
+										<td nowrap>T. Okamoto</td>
+										<td nowrap><a href="../P2_solution_y_1.zip" target="_blank">Sol.</a>&dagger;</td>
+									</tr>
+								</table>
+								<div style="margin-left:10pt;margin-right:10pt;">&dagger;Decompress the obtained file. Replace the decompressed text files by "P2_solution_y.txt" in the source code.</div>
+							</div>
+							<div class="subsection">Source code</div>
+							<div class="sentence" style="margin-bottom:10px"><a href="../P2.zip" target="_blank">P2.zip</a> (C/C++) &mdash; See "Readme.txt" in order to know how to use.</div>
+							<div class="subsection">References</div>
+							<div class="sentence" style="margin-bottom:10px">
+								<table border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td nowrap valign="top">[1]&nbsp;</td>
+										<td>Investigating R&amp;D committee on new development of computational intelligence techniques and their applications to industrial systems: <a href="https://www.bookpark.ne.jp/cm/ieej/detail.asp?content_id=IEEJ-GH1287-PDF" target="_blank">&quot;Optimization benchmark problems for industrial applications&quot;</a>, IEEJ Tech. Rep., No. 1287, Section 3.3 (2013) [in Japanese]</td>
+									</tr>
+									<tr>
+										<td nowrap valign="top">[2]&nbsp;</td>
+										<td>Y. Ueno and K. Mori: <a href="http://dx.doi.org/10.1109/ICSSE.2014.6887928" target="_blank">&quot;Optimizing pump operation scheduling for water supply systems&quot;</a>,  Proc. of IEEE Int. Conf. on System Science and Engineering 2014, pp. 171&ndash;174 (2014)</td>
+									</tr>
+									<tr>
+										<td nowrap valign="top">[3]&nbsp;</td>
+										<td>K. Yokokawa, T. Okamoto, A. Kawagoe, Y. Ueno, and K. Mori: &quot;Formulation and solutions for daily operation scheduling problem of water supply pump&quot;, Proc. of the first IEEJ International Workshop on Sensing, Actuation, and Motion Control (SAMCON2015), IS1-4 (2015)</td>
+									</tr>
+								</table>
+							</div>
+							<div class="subsection">Change log</div>
+							<ul class="classification">
+								<li class="classification">June 5th, 2015: The bibliographical data of the reference [3] is updated.
+								<li class="classification">Dec. 3rd, 2014: English page is released.
+								<li class="classification">Sept. 18th, 2014: A new solution is added to Known Feasible Solutions.
+								<li class="classification">June 3rd, 2014: Tolerance of constraint violations can be read from the external file.
+								<li class="classification">Mar. 13th, 2014: Parameters can be read from the external file. Destructor is modified.
+								<li class="classification">Nov. 7th, 2013: The source code is released.
+							</ul>
+							<!-- End of Main Contents -->
+							<!-- Begin of Footer -->
+							<br>
+							<hr color="#ff9900" size="1" width="100%" noshade>
+							<div align="right"><a class="toppage" href="./index.html">Go to top</a></div>
+							<!-- End of Footer -->
+						</td>
+						<td width="10"></td>
+					</tr>
+				</table>
+			</td>
+			<!-- Right Line -->
+			<td width="1" bgcolor="#000000"></td>
+		</tr>
+	</table>
+	<!-- End of Flame -->
+</body>
+</html>

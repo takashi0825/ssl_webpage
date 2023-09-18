@@ -1,0 +1,214 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="Description" content="産業応用のための最適化ベンチマーク問題集の紹介">
+	<meta name="Keywords" content="最適化,ベンチマーク,ベンチマーク問題集,産業応用,エネルギーマネジメントシステム,上水道ポンプ運用計画">
+	<title>産業応用のための最適化ベンチマーク問題集</title>
+	<link rel="StyleSheet" style="text/css" href="../style.css">
+</head>
+<body topmargin="0" leftmargin="0">
+	<!-- Begin of Flame -->
+	<table width="770" border="0" cellpadding="0" cellspacing="0" align="center" height="100%" id="top">
+		<tr>
+			<!-- Left Line -->
+			<td width="1" bgcolor="#000000"></td>
+			<!-- Main -->
+			<td width="768" valign="top">
+				<!-- Begin of Header -->
+				<table width="100%" bgcolor="#000099" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td align="center">
+							<h1 style="color:#ffffff">産業応用のための最適化ベンチマーク問題集</h1>
+						</td>
+					</tr>
+				</table>
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top:5px">
+					<tr>
+						<td align="right">
+							<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td>
+										一般社団法人 電気学会<br>
+										情報知能システムの新展開とその産業応用調査専門委員会&nbsp;<br>
+										産業応用のためのシステム最適化とベンチマーク問題調査専門委員会&nbsp;<br>
+										システム最適化と産業応用ベンチマーク問題調査専門委員会&nbsp;<br>
+										計算知能技術と産業応用のためのベンチマーク問題調査専門委員会&nbsp;
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="right"><u>Last update on Apr. 3rd, 2022</u>&nbsp;</td>
+					</tr>
+				</table>
+				<!-- End of header -->
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="10"></td>
+						<td width="748">
+							<!-- Begin of Main Contents -->
+							<div align="left" class="section">自動ピッキングシステム運用計画の最適化ベンチマーク問題</div>
+							<div align="left" class="section2">(Ver. 2)</div>
+							<hr color="#ff9900" size="1" width="100%" noshade>
+							<div class="subsection">問題概要</div>
+							<div class="sentence">
+								製品仕分けを行う物流機器の例として，自動ピッキングシステムがある。
+								自動ピッキングシステムでは，図1と図2に示すように，各仕分先から仕分要求が与えられると，各レーンに種類別に装填された製品をレーン間で同期を取りながらコンベヤ上に排出し，コンベア上で仕分要求別に製品群をまとめて流すことで，製品の仕分けを行う。
+								本システムの最適運用計画を得るには，各製品のレーンへの割付問題と，各仕分要求の処理順序やレーンからの製品の排出時刻を決定するスケジューリング問題を同時に考慮しなければならない。<br>
+								本問題では，2種類の運用計画問題（問題番号「00」と「01」）を提供する。<br>
+								<u>本ページのソースコードは文献[1]の定式化に基づいている。</u>
+							</div>
+							<div class="sentence" align="center" style="margin-top:10px;margin-bottom:10px"><img src="./P3-fig1.png" width="600" height="284"><br>図1：自動ピッキングシステム（文献[2]から引用）</div>
+							<div class="sentence" align="center" style="margin-top:10px;margin-bottom:10px"><img src="./P3-fig2.png" width="600" height="390"><br>図2：配送要求の例（文献[2]から引用）</div>
+							<div class="subsection">問題の部類・規模（問題番号00の場合）</div>
+							<ul class="classification">
+								<li class="classification">問題のクラス：非線形離散変数最適化問題</li>
+								<li class="classification">決定変数の数：925,500（連続：0，離散：925,500）</li>
+								<li class="classification">不等式制約条件数：89,075（線形：100，非線形：88,975）</li>
+								<li class="classification">等式制約条件数：19,100（線形：10,100，非線形：9,000）</li>
+							</ul>
+							<div class="subsection">Known Feasible Solutions</div>
+							<div class="sentence" style="margin-bottom:10px">
+								<table class="record" border="1" cellpadding="2" cellspacing="0">
+								<table class="record" border="1" cellpadding="2" cellspacing="0">
+									<tr>
+										<td class="record" rowspan="2" align="center"><b>解法</b></td>
+										<td class="record" rowspan="2" nowrap align="center"><b>目的関数値</b></td>
+										<td class="record" colspan="2" align="center"><b>制約違反</b></td>
+										<td class="record" rowspan="2" nowrap align="center"><b>文献</b></td>
+										<td class="record" rowspan="2" align="center"><b>報告者</b></td>
+										<td class="record" rowspan="2" align="center"><b>解</b></td>
+									</tr>
+									<tr>
+										<td class="record" align="center" nowrap><b>合計値</b></td>
+										<td class="record" align="center"><b>許容量</b></td>
+									</tr>
+									<tr>
+										<td>SA and Graph based heuristics</td>
+										<td nowrap align="right">3574.25</td>
+										<td align="right" nowrap>0</td>
+										<td align="right" nowrap>1.0 &#215; 10<sup>-10</sup></td>
+										<td align="center">[5]</td>
+										<td nowrap align="left">H. Tanji</td>
+										<td nowrap><a href="../P3-2_solution_5.zip" target="_blank">解</a>&dagger;（問題番号00）</td>
+									</tr>
+									<tr>
+										<td>SA and Graph based heuristics</td>
+										<td nowrap align="right">3271.25</td>
+										<td align="right" nowrap>0</td>
+										<td align="right" nowrap>1.0 &#215; 10<sup>-10</sup></td>
+										<td align="center">[5]</td>
+										<td nowrap align="left">H. Tanji</td>
+										<td nowrap><a href="../P3-2_solution_6.zip" target="_blank">解</a>&dagger;（問題番号01）</td>
+									</tr>
+									<tr>
+										<td>SA and Graph based heuristics</td>
+										<td nowrap align="right">3612.25</td>
+										<td align="center" nowrap>&mdash;</td>
+										<td align="right" nowrap>1.0 &#215; 10<sup>-10</sup></td>
+										<td align="center">[4]</td>
+										<td nowrap align="left">R. Kanaya</td>
+										<td nowrap>解&dagger;（問題番号00）</td>
+									</tr>
+									<tr>
+										<td>SA and Graph based heuristics</td>
+										<td nowrap align="right">3424.50</td>
+										<td align="center" nowrap>&mdash;</td>
+										<td align="right" nowrap>1.0 &#215; 10<sup>-10</sup></td>
+										<td align="center">[4]</td>
+										<td nowrap align="left">R. Kanaya</td>
+										<td nowrap>解&dagger;（問題番号01）</td>
+									</tr>
+									<tr>
+										<td>Constraint programming</td>
+										<td nowrap align="right">4149.5</td>
+										<td align="right" nowrap>0</td>
+										<td align="right" nowrap>1.0 &#215; 10<sup>-10</sup></td>
+										<td align="center">[3]</td>
+										<td nowrap align="left">T. Miyamoto</td>
+										<td nowrap><a href="../P3-2_solution_3.zip" target="_blank">解</a>&dagger;（問題番号00）</td>
+									</tr>
+									<tr>
+										<td>Constraint programming</td>
+										<td nowrap align="right">4047.0</td>
+										<td align="right" nowrap>0</td>
+										<td align="right" nowrap>1.0 &#215; 10<sup>-10</sup></td>
+										<td align="center">[3]</td>
+										<td nowrap align="left">T. Miyamoto</td>
+										<td nowrap><a href="../P3-2_solution_4.zip" target="_blank">解</a>&dagger;（問題番号01）</td>
+									</tr>
+									<tr>
+										<td align="center">&mdash;</td>
+										<td nowrap align="right">4206.0</td>
+										<td align="right" nowrap>0</td>
+										<td align="right" nowrap>0</td>
+										<td align="center">&mdash;</td>
+										<td nowrap align="center">&mdash;</td>
+										<td nowrap><a href="../P3-2_solution_1.zip" target="_blank">解</a>&dagger;（問題番号00）</td>
+									</tr>
+									<tr>
+										<td align="center">&mdash;</td>
+										<td nowrap align="right">4159.0</td>
+										<td align="right" nowrap>0</td>
+										<td align="right" nowrap>0</td>
+										<td align="center">&mdash;</td>
+										<td nowrap align="center">&mdash;</td>
+										<td nowrap><a href="../P3-2_solution_2.zip" target="_blank">解</a>&dagger;（問題番号01）</td>
+									</tr>
+								</table>
+								<div style="margin-left:10pt;margin-right:10pt;">&dagger;取得したファイルを解凍し，ソースコード内の「P3_solution_y.txt」,「P3_data.csv」と差し替えて下さい。</div>
+							</div>
+							<div class="subsection">ソースコード</div>
+							<div class="sentence" style="margin-bottom:10px"><a href="../P3-2.zip" target="_blank">P3-2.zip</a> (C/C++) &mdash; 使用法は「Readme.txt」を参照。</div>
+							<div class="subsection">参考文献</div>
+							<div class="sentence" style="margin-bottom:10px">
+								<table border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td nowrap valign="top">[1]&nbsp;</td>
+										<td>飯間等, 河野幸弘, 小熊祐司：<a href="http://doi.org/10.1541/ieejeiss.135.1270" target="_blank">「自動ピッキングシステムの運用計画ベンチマーク問題」</a>, 電気学会論文誌C, Vol. 135, No. 10, pp. 1270&ndash;1278 (2015) </td>
+									</tr>
+									<tr>
+										<td nowrap valign="top">[2]&nbsp;</td>
+										<td>電気学会 情報知能システムの新展開とその産業応用調査専門委員会：<a href="https://www.bookpark.ne.jp/cm/ieej/detail.asp?content_id=IEEJ-GH1287-PDF" target="_blank">「産業応用のための最適化ベンチマーク問題集」</a>, 電気学会技術報告 第1287号, 3.4節 (2013)</td>
+									</tr>
+									<tr>
+										<td nowrap valign="top">[3]&nbsp;</td>
+										<td>T. Miyamoto, K. Mori, S. Kitamura, and Y. Izui: &quot;Constraint programming model for operational planning and scheduling problem in automatic picking system&quot;, Proc. of International Symposium on Scheduling 2015, pp. 163&ndash;168 (2015)</td>
+									</tr>
+									<tr>
+										<td nowrap valign="top">[4]&nbsp;</td>
+										<td>金谷凌, 小圷成一, 岡本卓, 下馬場朋禄, 伊藤智義：「自動ピッキングシステムの運用計画ベンチマーク問題に対するSimulated Annealing を用いた解法の改良」, 計測自動制御学会 システム・情報部門学術講演会 2017 (SSI2017) 講演論文集, pp. 33&ndash;38 (2017)</td>
+									</tr>
+									<tr>
+										<td nowrap valign="top">[5]&nbsp;</td>
+										<td>丹治春人, 今堀慎治：「自動ピッキングシステム運用計画作成問題に対する高性能発見的解法」, スケジューリング・シンポジウム 2021 講演論文集, pp．57&ndash;62 (2021)</td>
+									</tr>
+								</table>
+							</div>
+							<div class="subsection">更新履歴</div>
+							<ul class="classification">
+								<li class="classification">Apr. 3rd, 2022: 文献[1]の著者の順番を修正。
+								<li class="classification">Mar. 16th, 2022: Known Feasible Solutionsに新たな解を追加。
+								<li class="classification">Dec. 7th, 2017: Known Feasible Solutionsに新たな解を追加。
+								<li class="classification">Jan. 5th, 2016: 文献[1]に基づいたソースコードを公開。
+							</ul>
+							<!-- End of Main Contents -->
+							<!-- Begin of Footer -->
+							<br>
+							<hr color="#ff9900" size="1" width="100%" noshade>
+							<div align="right"><a class="toppage" href="./index.html">トップに戻る</a></div>
+							<!-- End of Footer -->
+						</td>
+						<td width="10"></td>
+					</tr>
+				</table>
+			</td>
+			<!-- Right Line -->
+			<td width="1" bgcolor="#000000"></td>
+		</tr>
+	</table>
+	<!-- End of Flame -->
+</body>
+</html>

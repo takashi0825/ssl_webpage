@@ -1,0 +1,139 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="Description" content="Introdcution of optimization benchmark problems for industrial applications">
+	<meta name="Keywords" content="Optimization,Benchmark,Benchmark Problems,Industrial Application,Energy Management System,Water Supply Operational Scheduling">
+	<title>Optimization Benchmark Problems for Industrial Applications</title>
+	<link rel="StyleSheet" style="text/css" href="../style.css">
+</head>
+<body topmargin="0" leftmargin="0">
+	<!-- Begin of Flame -->
+	<table width="770" border="0" cellpadding="0" cellspacing="0" align="center" height="100%" id="top">
+		<tr>
+			<!-- Left Line -->
+			<td width="1" bgcolor="#000000"></td>
+			<!-- Main -->
+			<td width="768" valign="top">
+				<!-- Begin of Header -->
+				<table width="100%" bgcolor="#000099" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td align="center">
+							<h1 style="color:#ffffff">Optimization Benchmark Problems for Industrial Applications</h1>
+						</td>
+					</tr>
+				</table>
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top:5px">
+					<tr>
+						<td align="right">
+							<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td>
+										The Institute of Electrical Engineers of Japan<br>
+										Investigating R&amp;D committee on<br>&emsp;new development of computational intelligence techniques and<br>&emsp;their applications to industrial systems&nbsp;<br>
+										Investigating R&amp;D committee on<br>&emsp;system optimization and<br>&emsp;benchmark problems for industrial application&nbsp;
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="right"><u>Last update on June 5th, 2015</u>&nbsp;</td>
+					</tr>
+				</table>
+				<!-- End of header -->
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="10"></td>
+						<td width="748">
+							<!-- Begin of Main Contents -->
+							<div align="left" class="section">Optimization benchmark problem for series-parallel switching</div>
+							<div align="left" class="section2">of photovoltaic modules programming (Ver. 1)</div>
+							<hr color="#ff9900" size="1" width="100%" noshade>
+							<div class="sentence" style="color:#ff0000">This is old version. The latest version is available from <a href="./P6-2.html">P6 (Ver. 2)</a>.</div>
+							<div class="subsection">Summary</div>
+							<div class="sentence">
+								In the photovoltaic system, photovoltaic modules whose number is from a few dozen to a few thousand are connected in series or in parallel, and the generated power is transformed into AC power by the PCS (power conditioning system), as shown in Fig. 1.
+								Generated output of the photovoltaic modules is not necessarily constant due to the various characteristics of the module and influence from shadows.
+								Therefore, the modules cannot output maximum power.
+								This problem is formulated to determine a series-parallel module assignment parallel and current and voltage output in dynamic reconstruction of module connections so that the modules generate as much power as possible.<br>
+								This benchmark problem provides the photovoltaic modules serial-parallel switch programming problem with 54 modules and 9 layers.<br>
+								The specific formulation is given in the references [1] and [2].
+								The source code uses a little different symbols and formulations from the reference [1].
+								For details, please see the <a href="./P6-formulation.pdf" target="_blank">PDF document</a> (written in Japanese).
+							</div>
+							<div class="sentence" align="center" style="margin-top:10px;margin-bottom:10px"><img src="./P6-fig1.png" width="600" height="302"><br>Fig. 1: The photovoltaic modules series-parallel switching device and connection image [1]</div>
+							<div class="subsection">Class and scale</div>
+							<ul class="classification">
+								<li class="classification">Class: Mixed-integer nonlinear optimization problem</li>
+								<li class="classification">Number of decision variables: 116 (Continuous: 63, Discrete: 53)</li>
+								<li class="classification">Number of inequality constraints: 164 (Linear: 164, Nonlinear: 0)</li>
+								<li class="classification">Number of equality constraints: 63 (Linear: 9, Nonlinear: 54)</li>
+							</ul>
+							<div class="subsection">Known Feasible Solutions (OFV is objective function value. Sol. is solution.)</div>
+							<div class="sentence" style="margin-bottom:10px">
+								<table class="record" border="1" cellpadding="2" cellspacing="0">
+									<tr>
+										<td class="record" rowspan="2" align="center"><b>Method</b></td>
+										<td class="record" rowspan="2" align="center"><b>OFV</b></td>
+										<td class="record" colspan="2" align="center"><b>Constraint violations</b></td>
+										<td class="record" rowspan="2" nowrap align="center"><b>Ref.</b></td>
+										<td class="record" rowspan="2" align="center"><b>Reporter</b></td>
+										<td class="record" rowspan="2" align="center"><b>Sol.</b></td>
+									</tr>
+									<tr>
+										<td class="record" align="center"><b>Total</b></td>
+										<td class="record" align="center"><b>Tolerance</b></td>
+									</tr>
+									<tr>
+										<td>Tabu Search &times; SQP</td>
+										<td align="right">10757.47985</td>
+										<td align="right" nowrap>8.61 &#215; 10<sup>-12</sup></td>
+										<td align="right" nowrap>1.0 &#215; 10<sup>-10</sup></td>
+										<td align="center">[1]</td>
+										<td nowrap>T. Hayashi</td>
+										<td nowrap><a href="../P6-1_solution_1.zip" target="_blank">Sol.</a>&dagger;</td>
+									</tr>
+								</table>
+								<div style="margin-left:10pt;margin-right:10pt;">&dagger;Decompress the obtained file. Replace the decompressed text files by &quot;P6_solution_x.txt&quot; and &quot;P6_solution_y.txt&quot; in the source code.</div>
+							</div>
+							<div class="subsection">Source code</div>
+							<div class="sentence" style="margin-bottom:10px"><a href="../P6-1.zip" target="_blank">P6-1.zip</a> (C/C++) &mdash; See "Readme.txt" in order to know how to use.</div>
+							<div class="subsection">References</div>
+							<div class="sentence" style="margin-bottom:10px">
+								<table border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td nowrap valign="top">[1]&nbsp;</td>
+										<td>T. Hayashi: &quot;The serial-parallel switching of photovoltaic modules and mixed integer programming&quot;, Proc. of the 2014 Annual Meeting on the Institute of Electrical Engineers of Japan, Vol. 4, 4-S21(13)&ndash;(16) (2014) [in Japanese]</td>
+									</tr>
+									<tr>
+										<td nowrap valign="top">[2]&nbsp;</td>
+										<td>T. Hayashi: &quot;The series-parallel switching of photovoltaic modules, and mixed integer programming&quot;, Proc. of the first IEEJ International Workshop on Sensing, Actuation, Snd Motion Control (SAMCON2015), IS1-3 (2015)</td>
+									</tr>
+								</table>
+							</div>
+							<div class="subsection">Change log</div>
+							<ul class="classification">
+								<li class="classification">June 5th, 2015: The bibliographical data of the reference [2] is updated.
+								<li class="classification">July 18th, 2014: The figure is added to the summary.
+								<li class="classification">June 3rd, 2014: Tolerance of constraint violations can be read from the external file.
+								<li class="classification">Apr. 1st, 2014: The source code based on the reference [1] is released.
+							</ul>
+							<!-- End of Main Contents -->
+							<!-- Begin of Footer -->
+							<br>
+							<hr color="#ff9900" size="1" width="100%" noshade>
+							<div align="right"><a class="toppage" href="./index.html">Go to top</a></div>
+							<!-- End of Footer -->
+						</td>
+						<td width="10"></td>
+					</tr>
+				</table>
+			</td>
+			<!-- Right Line -->
+			<td width="1" bgcolor="#000000"></td>
+		</tr>
+	</table>
+	<!-- End of Flame -->
+</body>
+</html>

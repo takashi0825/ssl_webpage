@@ -1,0 +1,121 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="Description" content="産業応用のための最適化ベンチマーク問題集の紹介">
+	<meta name="Keywords" content="最適化,ベンチマーク,ベンチマーク問題集,産業応用,エネルギーマネジメントシステム,上水道ポンプ運用計画">
+	<title>産業応用のための最適化ベンチマーク問題集</title>
+	<link rel="StyleSheet" style="text/css" href="../style.css">
+</head>
+<body topmargin="0" leftmargin="0">
+	<!-- Begin of Flame -->
+	<table width="770" border="0" cellpadding="0" cellspacing="0" align="center" height="100%" id="top">
+		<tr>
+			<!-- Left Line -->
+			<td width="1" bgcolor="#000000"></td>
+			<!-- Main -->
+			<td width="768" valign="top">
+				<!-- Begin of Header -->
+				<table width="100%" bgcolor="#000099" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td align="center">
+							<h1 style="color:#ffffff">産業応用のための最適化ベンチマーク問題集</h1>
+						</td>
+					</tr>
+				</table>
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top:5px">
+					<tr>
+						<td align="right">
+							<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td>
+										一般社団法人 電気学会<br>
+										情報知能システムの新展開とその産業応用調査専門委員会&nbsp;<br>
+										産業応用のためのシステム最適化とベンチマーク問題調査専門委員会&nbsp;<br>
+										システム最適化と産業応用ベンチマーク問題調査専門委員会&nbsp;<br>
+										計算知能技術と産業応用のためのベンチマーク問題調査専門委員会&nbsp;
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="right"><u>Last update on May 1st, 2017</u>&nbsp;</td>
+					</tr>
+				</table>
+				<!-- End of header -->
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="10"></td>
+						<td width="748">
+							<!-- Begin of Main Contents -->
+							<div align="left" class="section">自律移動ロボットの行動設計最適化ベンチマーク問題</div>
+							<hr color="#ff9900" size="1" width="100%" noshade>
+							<div class="subsection">問題概要</div>
+							<div class="sentence">
+								自律移動ロボットは，自律性を重要視したロボット技術である。
+								状況や環境にうまく適応しながら作業できるような適応性の要素を備えた自律移動ロボットのコントローラ技術は，自動車のオートパイロット，工場内の荷物運搬ロボットの制御，自動掃除ロボットの巡回ルート構築などに応用可能で，その開発が強く求められている。<br>
+								本問題では，オープンソースの物理計算エンジンであるOpen Dynamics Engine[1]を用いて開発した実際の車輪移動ロボットの特性を反映した3Dシミュレータを公開するとともに，自律移動ロボットのコントローラの設計手法を評価するためのベンチマーク問題を提供する。<br>
+								公開するシミュレータでは，自律移動ロボットとして，図1に示す構造を持つe-puck[2][3]を想定する。シミュレータには，図2に示すような環境下での自律移動ロボットの行動設計問題が含まれている。シミュレータの設計（ロボット・環境のモデル化）と最適化問題の定式化の詳細については，文献[4][5]を参照されたい。
+							</div>
+							<div class="sentence" align="center" style="margin-top:10px;margin-bottom:10px">
+								<table border="0" cellpadding="2" cellspacing="0" width="100%">
+									<tr>
+										<td align="center" valign="bottom" width="50%">
+											<img src="./P9-fig1.png" width="218" height="233"><br>図1：自律移動ロボットの構造<br>（文献[5]から引用）
+										</td>
+										<td align="center" valign="bottom" width="50%">
+											<img src="./P9-fig2.png" width="282" height="216"><br>図2：計画行動の設計問題の環境<br>（文献[5]から引用）
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="subsection">ソースコード</div>
+							<div class="sentence" style="margin-bottom:10px"><a href="../P9.zip" target="_blank">P9.zip</a> (C/C++) &mdash; 使用法は「readme.txt」を参照。</div>
+							<div class="subsection">参考文献</div>
+							<div class="sentence" style="margin-bottom:10px">
+								<table border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td nowrap valign="top">[1]&nbsp;</td>
+										<td>R. Smith: &quot;Open dynamics engine&quot;, <a href="http://www.ode.org/" target="_blank">http://http://www.ode.org/</a> (2007)</td>
+									</tr>
+									<tr>
+										<td nowrap valign="top">[2]&nbsp;</td>
+										<td>F. Mondada and M. Bonani: &quot;e-puck&quot;, <a href="http://www.e-puck.org/" target="_blank">http://www.e-puck.org/</a> (2015)</td>
+									</tr>
+									<tr>
+										<td nowrap valign="top">[3]&nbsp;</td>
+										<td>F. Mondada, M. Bonani, X. Raemy, J. Pugh, C. Cianci, A. Klaptocz, S. Magnenat, J. Zufferey, D. Floreano, and A. Martinoli: &quot;The e-puck, a robot designed for education in engineering&quot;, Proc. of the 9th Conference on Autonomous Robot Systems and Competitions, pp. 59&ndash;65 (2009)</td>
+									</tr>
+									<tr>
+										<td nowrap valign="top">[4]&nbsp;</td>
+										<td>元木誠，岡本卓，飯間等，秋吉政徳：「自律移動ロボットのコントローラ設計のためのベンチマーク問題」, 電気学会 システム研究会 資料, ST-16-042 (2016)</td>
+									</tr>
+									<tr>
+										<td nowrap valign="top">[5]&nbsp;</td>
+										<td>元木誠，岡本卓，飯間等，秋吉政徳：「自律移動ロボットの行動設計最適化ベンチマーク問題」, 平成29年 電気学会全国大会 講演論文集, 3-S10-5 (2017)</td>
+									</tr>
+								</table>
+							</div>
+							<div class="subsection">更新履歴</div>
+							<ul class="classification">
+								<li class="classification">May 1st, 2017: 文献[5]に基づいたソースコードを公開。
+							</ul>
+							<!-- End of Main Contents -->
+							<!-- Begin of Footer -->
+							<br>
+							<hr color="#ff9900" size="1" width="100%" noshade>
+							<div align="right"><a class="toppage" href="./index.html">トップに戻る</a></div>
+							<!-- End of Footer -->
+						</td>
+						<td width="10"></td>
+					</tr>
+				</table>
+			</td>
+			<!-- Right Line -->
+			<td width="1" bgcolor="#000000"></td>
+		</tr>
+	</table>
+	<!-- End of Flame -->
+</body>
+</html>

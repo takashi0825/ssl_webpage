@@ -1,0 +1,134 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="Description" content="産業応用のための最適化ベンチマーク問題集の紹介">
+	<meta name="Keywords" content="最適化,ベンチマーク,ベンチマーク問題集,産業応用,エネルギーマネジメントシステム,上水道ポンプ運用計画">
+	<title>産業応用のための最適化ベンチマーク問題集</title>
+	<link rel="StyleSheet" style="text/css" href="../style.css">
+</head>
+<body topmargin="0" leftmargin="0">
+	<!-- Begin of Flame -->
+	<table width="770" border="0" cellpadding="0" cellspacing="0" align="center" height="100%" id="top">
+		<tr>
+			<!-- Left Line -->
+			<td width="1" bgcolor="#000000"></td>
+			<!-- Main -->
+			<td width="768" valign="top">
+				<!-- Begin of Header -->
+				<table width="100%" bgcolor="#000099" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td align="center">
+							<h1 style="color:#ffffff">産業応用のための最適化ベンチマーク問題集</h1>
+						</td>
+					</tr>
+				</table>
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top:5px">
+					<tr>
+						<td align="right">
+							<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td>
+										一般社団法人 電気学会<br>
+										情報知能システムの新展開とその産業応用調査専門委員会&nbsp;<br>
+										産業応用のためのシステム最適化とベンチマーク問題調査専門委員会&nbsp;<br>
+										システム最適化と産業応用ベンチマーク問題調査専門委員会&nbsp;<br>
+										計算知能技術と産業応用のためのベンチマーク問題調査専門委員会&nbsp;
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="right"><u>Last update on May 1st, 2017</u>&nbsp;</td>
+					</tr>
+				</table>
+				<!-- End of header -->
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="10"></td>
+						<td width="748">
+							<!-- Begin of Main Contents -->
+							<div align="left" class="section">太陽光発電モジュール直並切替の最適化ベンチマーク問題 (Ver. 3)</div>
+							<hr color="#ff9900" size="1" width="100%" noshade>
+							<div class="subsection">問題概要</div>
+							<div class="sentence">
+								太陽光発電システムでは，図1に示すように，太陽光発電モジュール数十枚から数千枚を直列に，あるいは並列に接続し，PCS（パワーコンディショナー）で交流に変換する。太陽光発電モジュールの発電量は，特性のバラつきや影などの影響によってかならずしも均一ではなく，最大電力を発電することができない。本問題は，できるだけ多くの発電量を得るために，モジュール間の配線を動的に再構成する際のモジュールの直列並列配置と電流・電圧量を決定する問題である。<br>
+								本問題では，54モジュール，9層（並列接続されたモジュールの組）の最適化問題を提供する。<br>
+								定式化については，文献[1]を参考にされたいが，本ページで公開しているコードは文献[1]の定式化と少し異なる記号と定式化を用いている。詳細については，<a href="./P6-3-formulation.pdf" target="_blank">こちら (PDF) </a>を参考にされたい。<br>
+								本バージョンでは，文献[2]にしたがって，1分刻み8日分の時系列データを用いた11,520パターンのモジュール最適化問題を提供する。<br>
+							</div>
+							<div class="sentence" align="center" style="margin-top:10px;margin-bottom:10px"><img src="./P6-fig1.png" width="600" height="302"><br>図1：太陽光発電モジュール直並切替装置と接続イメージ（文献[1]から引用）</div>
+							<div class="subsection">問題の部類・規模</div>
+							<ul class="classification">
+								<li class="classification">問題のクラス：非線形混合整数計画問題</li>
+								<li class="classification">決定変数の数：116（連続：63，離散：53）</li>
+								<li class="classification">不等式制約条件数：164（線形：164，非線形：0）</li>
+								<li class="classification">等式制約条件数：63（線形：9，非線形：54）</li>
+							</ul>
+							<div class="subsection">Known Feasible Solutions</div>
+							<div class="sentence" style="margin-bottom:10px">
+								<table class="record" border="1" cellpadding="2" cellspacing="0">
+									<tr>
+										<td class="record" rowspan="2" align="center"><b>時刻</b></td>
+										<td class="record" rowspan="2" align="center"><b>解法</b></td>
+										<td class="record" rowspan="2" align="center"><b>目的関数値</b></td>
+										<td class="record" colspan="2" align="center"><b>制約違反</b></td>
+										<td class="record" rowspan="2" nowrap align="center"><b>文献</b></td>
+										<td class="record" rowspan="2" align="center"><b>報告者</b></td>
+										<td class="record" rowspan="2" align="center"><b>解</b></td>
+									</tr>
+									<tr>
+										<td class="record" align="center"><b>合計値</b></td>
+										<td class="record" align="center"><b>許容量</b></td>
+									</tr>
+									<tr>
+										<td nowrap>2012/7/9<br>11:19<br>(t = 679)</td>
+										<td>Tabu Search（離散変数）+ SQP（連続変数）</td>
+										<td align="right">5328.36958</td>
+										<td align="right" nowrap>7.72 &#215; 10<sup>-11</sup></td>
+										<td align="right" nowrap>1.0 &#215; 10<sup>-10</sup></td>
+										<td align="center">[2]</td>
+										<td nowrap>T. Hayashi</td>
+										<td nowrap><a href="../P6-3_solution_1.zip" target="_blank">解</a>&dagger;</td>
+									</tr>
+								</table>
+								<div style="margin-left:10pt;margin-right:10pt;">&dagger;取得したファイルを解凍し，ソースコード内の「P6_solution_x.txt」,「P6_solution_y.txt」と差し替えて下さい。</div>
+							</div>
+							<div class="subsection">ソースコード</div>
+							<div class="sentence" style="margin-bottom:10px"><a href="../P6-3.zip" target="_blank">P6-3.zip</a> (C/C++) &mdash; 使用法は「Readme.txt」を参照。</div>
+							<div class="subsection">参考文献</div>
+							<div class="sentence" style="margin-bottom:10px">
+								<table border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td nowrap valign="top">[1]&nbsp;</td>
+										<td>T. Hayashi: &quot;The series-parallel switching of photovoltaic modules, and mixed integer programming&quot;,  Proc. of the first IEEJ International Workshop on Sensing, Actuation, and Motion Control (SAMCON2015), IS1-3 (2015)</td>
+									</tr>
+									<tr>
+										<td nowrap valign="top">[2]&nbsp;</td>
+										<td>林孝則：「時系列データによる太陽光発電モジュール直並切替最適化の有効性評価」, 平成29年電気学会全国大会講演論文集, 3-S10-4 (2017)</td>
+									</tr>
+								</table>
+							</div>
+							<div class="subsection">更新履歴</div>
+							<ul class="classification">
+								<li class="classification">May 1st, 2017: 文献[1], [2]に基づいたソースコードを公開。
+							</ul>
+							<!-- End of Main Contents -->
+							<!-- Begin of Footer -->
+							<br>
+							<hr color="#ff9900" size="1" width="100%" noshade>
+							<div align="right"><a class="toppage" href="./index.html">トップに戻る</a></div>
+							<!-- End of Footer -->
+						</td>
+						<td width="10"></td>
+					</tr>
+				</table>
+			</td>
+			<!-- Right Line -->
+			<td width="1" bgcolor="#000000"></td>
+		</tr>
+	</table>
+	<!-- End of Flame -->
+</body>
+</html>
