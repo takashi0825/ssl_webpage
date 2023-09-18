@@ -1,10 +1,10 @@
-<html>
+﻿<html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="Content-Style-Type" content="text/css">
-	<meta name="Description" content="�Y�Ɖ��p�̂��߂̍œK���x���`�}�[�N���W�̏Љ�">
-	<meta name="Keywords" content="�œK��,�x���`�}�[�N,�x���`�}�[�N���W,�Y�Ɖ��p,�G�l���M�[�}�l�W�����g�V�X�e��,�㐅���|���v�^�p�v��">
-	<title>�Y�Ɖ��p�̂��߂̍œK���x���`�}�[�N���W</title>
+	<meta name="Description" content="産業応用のための最適化ベンチマーク問題集の紹介">
+	<meta name="Keywords" content="最適化,ベンチマーク,ベンチマーク問題集,産業応用,エネルギーマネジメントシステム,上水道ポンプ運用計画">
+	<title>産業応用のための最適化ベンチマーク問題集</title>
 	<link rel="StyleSheet" style="text/css" href="../style.css">
 </head>
 <body topmargin="0" leftmargin="0">
@@ -19,7 +19,7 @@
 				<table width="100%" bgcolor="#000099" border="0" cellpadding="0" cellspacing="0">
 					<tr>
 						<td align="center">
-							<h1 style="color:#ffffff">�Y�Ɖ��p�̂��߂̍œK���x���`�}�[�N���W</h1>
+							<h1 style="color:#ffffff">産業応用のための最適化ベンチマーク問題集</h1>
 						</td>
 					</tr>
 				</table>
@@ -29,11 +29,11 @@
 							<table border="0" cellpadding="0" cellspacing="0">
 								<tr>
 									<td>
-										��ʎВc�@�l �d�C�w��<br>
-										���m�\�V�X�e���̐V�W�J�Ƃ��̎Y�Ɖ��p�������ψ���&nbsp;<br>
-										�Y�Ɖ��p�̂��߂̃V�X�e���œK���ƃx���`�}�[�N��蒲�����ψ���&nbsp;<br>
-										�V�X�e���œK���ƎY�Ɖ��p�x���`�}�[�N��蒲�����ψ���&nbsp;<br>
-										�v�Z�m�\�Z�p�ƎY�Ɖ��p�̂��߂̃x���`�}�[�N��蒲�����ψ���&nbsp;
+										一般社団法人 電気学会<br>
+										情報知能システムの新展開とその産業応用調査専門委員会&nbsp;<br>
+										産業応用のためのシステム最適化とベンチマーク問題調査専門委員会&nbsp;<br>
+										システム最適化と産業応用ベンチマーク問題調査専門委員会&nbsp;<br>
+										計算知能技術と産業応用のためのベンチマーク問題調査専門委員会&nbsp;
 									</td>
 								</tr>
 							</table>
@@ -49,71 +49,71 @@
 						<td width="10"></td>
 						<td width="748">
 							<!-- Begin of Main Contents -->
-							<div align="left" class="section">�\�[�X�R�[�h�̎g����</div>
+							<div align="left" class="section">ソースコードの使い方</div>
 							<hr color="#ff9900" size="1" width="100%" noshade>
-							<div class="subsection">�͂��߂�</div>
+							<div class="subsection">はじめに</div>
 							<div class="sentence" style="margin-bottom:10px">
-								�\�[�X�R�[�h�̎g�����ɂ��Đ������܂��B<br>
-								�ȉ��ł́CP1���Ƃ��Đ������܂����C���̃R�[�h�ł����l�̗v�̂Ŏg�����Ƃ��ł��܂��B
+								ソースコードの使い方について説明します。<br>
+								以下では，P1を例として説明しますが，他のコードでも同様の要領で使うことができます。
 							</div>
-							<div class="subsection">�t�@�C���\��</div>
+							<div class="subsection">ファイル構成</div>
 							<ul class="classification">
-								<li class="classification">P1.cpp<br>P1�i�G�l���M�[�v�����g�^�p�v����j�N���X���C���t�@�C���B</li>
-								<li class="classification">P1.h<br>P1�N���X�̃w�b�_�[�t�@�C���B</li>
-								<li class="classification">P1_evaluation.cpp<br>���͂��ꂽ���̕]�����s���v���O�����BP1�N���X���g�����߂̃T���v���v���O�����ł��B</li>
-								<li class="classification">P1_x.txt<br>P1_evaluation.cpp�ŕ]��������̐ݒ�t�@�C���B��n�s�ڂɑ�n�ϐ��̒l���L�q���ĉ������B</li>
-								<li class="classification">P1_tolerance.conf<br>����ᔽ���e��&#949;�̐ݒ�t�@�C���Bg(x) &gt; &#949;, |h(x)| &gt; &#949;�̂Ƃ��ɐ���ᔽ�Ɣ��肵�܂��B</li>
-								<li class="classification">P1_***.conf<br>P1�N���X�œǂݍ��܂��萔�̐ݒ�t�@�C���B</li>
+								<li class="classification">P1.cpp<br>P1（エネルギープラント運用計画問題）クラスメインファイル。</li>
+								<li class="classification">P1.h<br>P1クラスのヘッダーファイル。</li>
+								<li class="classification">P1_evaluation.cpp<br>入力された解の評価を行うプログラム。P1クラスを使うためのサンプルプログラムです。</li>
+								<li class="classification">P1_x.txt<br>P1_evaluation.cppで評価する解の設定ファイル。第n行目に第n変数の値を記述して下さい。</li>
+								<li class="classification">P1_tolerance.conf<br>制約違反許容量&#949;の設定ファイル。g(x) &gt; &#949;, |h(x)| &gt; &#949;のときに制約違反と判定します。</li>
+								<li class="classification">P1_***.conf<br>P1クラスで読み込まれる定数の設定ファイル。</li>
 							</ul>
-							<div class="subsection">�]���v���O�����i�T���v���R�[�h�j�̎��s���@</div>
+							<div class="subsection">評価プログラム（サンプルコード）の実行方法</div>
 							<ul class="classification">
-								<li class="classification">Visual C++�̏ꍇ<br>cl P1.cpp P1_evaluation.cpp /FeP1.exe /EHsc�i�\�[�X�R�[�h�̃R���p�C���j<br>P1.exe�i�R�[�h�̎��s�j
-								<li class="classification">gcc�̏ꍇ<br>g++ P1.cpp P1_evaluation.cpp -o P1.out�i�\�[�X�R�[�h�̃R���p�C���j<br>./P1.out�i�R�[�h�̎��s�j
-								<li class="classification">���s����<br>P1_x.txt���ɋL�q��������]�����C�ȉ����o�͂��܂��B<br>
+								<li class="classification">Visual C++の場合<br>cl P1.cpp P1_evaluation.cpp /FeP1.exe /EHsc（ソースコードのコンパイル）<br>P1.exe（コードの実行）
+								<li class="classification">gccの場合<br>g++ P1.cpp P1_evaluation.cpp -o P1.out（ソースコードのコンパイル）<br>./P1.out（コードの実行）
+								<li class="classification">実行結果<br>P1_x.txt内に記述した解を評価し，以下を出力します。<br>
 								<ul class="classification">
-									<li class="classification2">x = ...�F���͂�������\��
-									<li class="classification2">y = ...�F���͂���������\���������U����ϐ���\��
-									<li class="classification2">f1 = ...�F1�Ԗڂ̖ړI�֐��l�B<br>
-									Known Feasible Solutions�̖ړI�֐��l�ɂ͂��̒l���f�ڂ��Ă��܂��B
-									<li class="classification2">g1 = ...�F1�Ԗڂ̕s������������]���l�B
-									<li class="classification2">h1 = ...�F1�Ԗڂ̓�����������]���l�B
-									<li class="classification2">Sum of violation = ...�F����ᔽ�ʍ��v�lV(x,y)�B<br>
-									V(x,y) = max{0, g1(x,y)} + max{0, g2(x,y)} + ... + |h1(x,y)| + |h2(x,y)| + ...�B<br>
-									Known Feasible Solutions�̐���ᔽ�ʍ��v�l�ɂ͂��̒l���f�ڂ��Ă��܂��B
-									<li class="classification2">Tolerance: ...�FP1_tolerance.conf�œ��͂�������ᔽ���e��&#949;
-									<li class="classification2">Input solution is ***�F<br>
-									���͂����������s�\���ł����***��feasible, <br>
-									���s�s�\���ł����***��infeasible�ƂȂ�܂��B
+									<li class="classification2">x = ...：入力した解を表示
+									<li class="classification2">y = ...：入力した解から構成した離散決定変数を表示
+									<li class="classification2">f1 = ...：1番目の目的関数値。<br>
+									Known Feasible Solutionsの目的関数値にはこの値を掲載しています。
+									<li class="classification2">g1 = ...：1番目の不等式制約条件評価値。
+									<li class="classification2">h1 = ...：1番目の等式制約条件評価値。
+									<li class="classification2">Sum of violation = ...：制約違反量合計値V(x,y)。<br>
+									V(x,y) = max{0, g1(x,y)} + max{0, g2(x,y)} + ... + |h1(x,y)| + |h2(x,y)| + ...。<br>
+									Known Feasible Solutionsの制約違反量合計値にはこの値を掲載しています。
+									<li class="classification2">Tolerance: ...：P1_tolerance.confで入力した制約違反許容量&#949;
+									<li class="classification2">Input solution is ***：<br>
+									入力した解が実行可能解であれば***がfeasible, <br>
+									実行不可能解であれば***がinfeasibleとなります。
 								</ul>
 							</ul>
-							<div class="subsection">�N���X�\�� (Public methods)</div>
+							<div class="subsection">クラス構成 (Public methods)</div>
 							<ul class="classification">
 								<li class="classification">void P1::evaluation(double *x, double *y, double *f, double *g, double *h)<br>
-								�ړI�֐��l�Ɛ�������]���l���v�Z���܂��B<br>
-								�A������ϐ���z��x�ɁC���U����ϐ���z��y�ɑ�����Ă��������B<br>
-								�ړI�֐��l���z��f�C�s������������]���l���z��g�C������������]���l���z��h��<br>
-								�������܂��B
+								目的関数値と制約条件評価値を計算します。<br>
+								連続決定変数を配列xに，離散決定変数を配列yに代入してください。<br>
+								目的関数値が配列f，不等式制約条件評価値が配列g，等式制約条件評価値が配列hに<br>
+								代入されます。
 								<li class="classification">bool P1::checkFeasibility(double *x, double *y)<br>
-								���̎��s�\�����m�F���܂��B<br>
-								�A������ϐ���z��x�ɁC���U����ϐ���z��y�ɑ�����Ă��������B<br>
-								P1_tolerance.conf�Őݒ肵������ᔽ���e��&#949;��p���āC<br>
-								g(x) &gt; &#949;, |h(x)| &gt; &#949;�̂Ƃ��ɐ���ᔽ�Ɣ��肵�܂��B<br>
-								���s�\���ł���΁utrue�v���C���s�s�\�ł���΁ufalse�v��Ԃ��܂��B
+								解の実行可能性を確認します。<br>
+								連続決定変数を配列xに，離散決定変数を配列yに代入してください。<br>
+								P1_tolerance.confで設定した制約違反許容量&#949;を用いて，<br>
+								g(x) &gt; &#949;, |h(x)| &gt; &#949;のときに制約違反と判定します。<br>
+								実行可能解であれば「true」を，実行不可能であれば「false」を返します。
 							</ul>
-							<div class="subsection">�N���X�\�� (Public properties)</div>
+							<div class="subsection">クラス構成 (Public properties)</div>
 							<ul class="classification">
-								<li class="classification">int P1.N_x�F�A������ϐ��̐��B
-								<li class="classification">int P1.N_y�F���U����ϐ��̐��B
-								<li class="classification">int P1.P�F�ړI�֐��̐��B
-								<li class="classification">int P1.M�F�s������������̐��B
-								<li class="classification">int P1.Q�F������������̐��B
-								<li class="classification">double P1.eps�F����ᔽ���e�ʁB
+								<li class="classification">int P1.N_x：連続決定変数の数。
+								<li class="classification">int P1.N_y：離散決定変数の数。
+								<li class="classification">int P1.P：目的関数の数。
+								<li class="classification">int P1.M：不等式制約条件の数。
+								<li class="classification">int P1.Q：等式制約条件の数。
+								<li class="classification">double P1.eps：制約違反許容量。
 							</ul>
 							<!-- End of Main Contents -->
 							<!-- Begin of Footer -->
 							<br>
 							<hr color="#ff9900" size="1" width="100%" noshade>
-							<div align="right"><a class="toppage" href="./index.html">�g�b�v�ɖ߂�</a></div>
+							<div align="right"><a class="toppage" href="./index.html">トップに戻る</a></div>
 							<!-- End of Footer -->
 						</td>
 						<td width="10"></td>
